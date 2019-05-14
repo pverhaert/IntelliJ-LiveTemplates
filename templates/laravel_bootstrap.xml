@@ -29,4 +29,16 @@
             <option name="PHP" value="true" />
         </context>
     </template>
+    <template name="lar-bs4-alert-bis"
+              value="@if(session()-&gt;has('$session$'))&#10;    &lt;div class=&quot;alert $type$ alert-dismissible fade show&quot;&gt;&#10;        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;span&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;&#10;        $typeText. $END$&#10;    &lt;/div&gt;&#10;@endif"
+              description="Laravel Bootstrap 4 Alert"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="type" expression="enum(&quot;alert-danger&quot;,&quot;alert-success&quot;,&quot;alert-primary&quot;,&quot;alert-secondary&quot;,&quot;alert-warning&quot;,&quot;alert-info&quot;,&quot;alert-light&quot;,&quot;alert-dark&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="session" expression="enum(&quot;danger&quot;,&quot;success&quot;,&quot;primary&quot;,&quot;secondary&quot;,&quot;warning&quot;,&quot;info&quot;,&quot;light&quot;,&quot;dark&quot;)" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="HTML" value="true" />
+            <option name="PHP" value="true" />
+        </context>
+    </template>
 </templateSet>
