@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="ITF Laravel">
+    <template name="lar-bs4-input"
+              value="&lt;div class=&quot;form-group {{ $errors-&gt;first('$nameCopy$') ? 'is-invalid' : 'is-valid' }}&quot;&gt;&#10;    &lt;label for=&quot;$nameCopy$&quot;&gt;$nameUpper$&lt;/label&gt;&#10;    &lt;input type=&quot;$type$$END$&quot; name=&quot;$name$&quot; id=&quot;$nameCopy$&quot; class=&quot;form-control&quot; placeholder=&quot;$nameCopy$&quot; required&#10;    value=&quot;{{ old('$name$', $table$) }}&quot;&gt;&#10;    &lt;div class=&quot;invalid-feedback&quot;&gt;{{ $errors-&gt;first('$nameCopy$') }}&lt;/div&gt;&#10;&lt;/div&gt;"
+              description="Laravel Bootstrap4 Input Field"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="type" expression="enum(&quot;text&quot;, &quot;email&quot;, &quot;password&quot;)"
+                  defaultValue="" alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="nameUpper" expression="" defaultValue="capitalize(name)" alwaysStopAt="false"/>
+        <variable name="nameCopy" expression="" defaultValue="name" alwaysStopAt="false"/>
+        <variable name="table" expression="enum(&quot;''&quot;, concat(&quot;$user-&gt;&quot;,name))"
+                  defaultValue="&quot;$user&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="PHP" value="true"/>
+        </context>
+    </template>
+</templateSet>
